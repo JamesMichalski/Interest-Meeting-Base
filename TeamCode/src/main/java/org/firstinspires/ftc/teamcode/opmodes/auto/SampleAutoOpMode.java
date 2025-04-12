@@ -38,6 +38,7 @@ public class SampleAutoOpMode extends OpMode {
     @Override
     public void loop() {
         if(getRuntime() >= driveTime){
+            telemetry.addLine("Done!");
             leftDriveMotor.setPower(0);
             rightDriveMotor.setPower(0);
             requestOpModeStop();
